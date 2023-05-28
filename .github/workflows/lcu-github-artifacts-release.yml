@@ -1,20 +1,20 @@
-name: React Build/Release
+name: MattAfterParty/TAPPAuth0
 
 on:
   push:
-    branches: [main,integration,feature/**,hotfix/**]
+    branches: [integration]
   pull_request:
-    branches: [main,integration,feature/**,hotfix/**]
+    branches: [integration]
   workflow_dispatch:
 
 permissions: write-all
 
 env:
   CI: false
-  Branches: main,integration,feature/**,hotfix/**
+  Branches: integration
   MainBranch: integration
   NPMRegistry: https://registry.npmjs.org/
-  InstallCommand: npm ci
+  InstallCommand: npm i
   BuildCommand: npm run build
   Output: ./build
 
